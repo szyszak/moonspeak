@@ -1,0 +1,162 @@
+doctype html
+html(lang="en")
+  head
+
+    meta(charset="UTF-8")
+    title Moonspeak
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="x-ua-compatible" content="IE=edge")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.css")
+    link(rel="stylesheet" href="styles.css")
+
+  body
+
+    nav(class="nav-bar" role="navigation")
+      button.nav-toggle
+        span.nav-toggle__line
+        span.nav-toggle__line
+        span.nav-toggle__line
+        span.nav-toggle__line
+          
+      ul.nav-menu
+        li.nav-menu__item
+          a(class="nav-menu__link" href="#portfolio") PORTFOLIO
+        li.nav-menu__item
+          a(class="nav-menu__link" href="#about") ABOUT
+        li.nav-menu__item
+          a(class="nav-menu__link nav-menu__link--brand" href="#top") MOONSPEAK
+        li.nav-menu__item
+          a(class="nav-menu__link" href="#articles") ARTICLES
+        li.nav-menu__item
+          a(class="nav-menu__link" href="#contact") CONTACT
+
+    header.header#top
+      .container
+        .row
+          .col-md-offset-6.col-md-6
+            p.header-paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+
+    section.project
+      .project-info
+        h1.project-info__header Aarhus Lejerboliger
+        p.project-info__paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        button.project-info__button VIEW PROJECT
+
+    section.portfolio#portfolio
+      
+      .container-fluid
+        .row
+          .col-md-4.col-sm-6.col-xs-12
+            .tile
+              img(class="gallery-image" src="img/1.jpg" alt="Photo camera.")
+              .tile-overlay
+                p.tile-overlay__text LOREM IPSUM
+          .col-md-4.col-sm-6.col-xs-12
+            .tile
+              img(class="gallery-image" src="img/2.jpg" alt="Woman holding a book.")
+              .tile-overlay
+                p.tile-overlay__text LOREM IPSUM
+          .col-md-4.col-sm-6.col-xs-12
+            .tile
+              img(class="gallery-image" src="img/3.jpg" alt="Woman playing violin.")
+              .tile-overlay
+                p.tile-overlay__text LOREM IPSUM
+          .col-md-4.col-sm-6.col-xs-12
+            .tile
+              img(class="gallery-image" src="img/4.jpg" alt="Smartwatch")
+              .tile-overlay
+                p.tile-overlay__text LOREM IPSUM
+          .col-md-4.col-sm-6.col-xs-12
+            .tile
+              img(class="gallery-image" src="img/5.jpg" alt="Woman with a laptop.")
+              .tile-overlay
+                p.tile-overlay__text LOREM IPSUM
+          .col-md-4.col-sm-6.col-xs-12
+            .tile
+              img(class="gallery-image" src="img/6.jpg" alt="Computer.")
+              .tile-overlay
+                p.tile-overlay__text LOREM IPSUM
+
+    section.quote
+      p.quote-paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    section.about#about
+      
+      .container-fluid
+        .row
+          .col-md-6.col-xs-12
+            img(class="about-image" src="img/buttons.jpg" alt="")
+              
+          .col-md-6.col-xs-12.info
+            .info-box
+              h1.info-box__header MOONSPEAK
+              p.info-box__paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+            .info-box
+              h1.info-box__header MOONSPEAK
+              p.info-box__paragraph Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+            .info-box
+              h1.info-box__header MOONSPEAK
+              p.info-box__paragraph Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint.
+
+    section.articles#articles
+      
+      .container
+        .row
+          .col-md-4.col-xs-12
+            .article
+              h1.article__header Excepteur sint occaecat cupidatat non proident
+              p.article__paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              a(class="article__link" href="#") Learn More
+
+          .col-md-4.col-xs-12
+            .article
+              h1.article__header Excepteur sint occaecat cupidatat non proident
+              p.article__paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              a(class="article__link" href="#") Learn More
+
+          .col-md-4.col-xs-12
+            .article
+              h1.article__header Excepteur sint occaecat cupidatat non proident
+              p.article__paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              a(class="article__link" href="#") Learn More
+
+    section.contact#contact
+      
+      .container
+        .row
+          .col-md-6.col-xs-12
+            address.address
+              p.address__paragraph There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+
+              div
+                h1.address__header Phone number
+                p.address__paragraph +40 770 123 456
+
+              div
+                h1.address__header Email
+                p.address__paragraph almaz@bisenbaev.com
+                
+          .col-md-6.col-xs-12
+            .map
+              iframe(width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=warsaw&key=AIzaSyDKcLYfPz6UDMLj_ELzvcoMlfIP1WZs2po" allowfullscreen)
+
+
+    footer.footer
+      
+      .social
+        a(class="social-link" href="http://twitter.com/")
+          span(class="fa fa-twitter")
+        a(class="social-link" href="http://facebook.com/")
+          span(class="fa fa-facebook-official")
+        a(class="social-link" href="http://instagram.com/")
+          span(class="fa fa-instagram")
+        a(class="social-link" href="http://youtube.com/")
+          span(class="fa fa-youtube-play")
+
+      p.copyright Copyright 2017
+
+
+    script(src="scripts.js")
