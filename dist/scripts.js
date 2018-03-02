@@ -22,43 +22,15 @@ navLinks.forEach(link => {
 
 // SMOOTH SCROLL
 
-function getElemY(elemID) {
-    const elem = document.querySelector(elemID);
-    const y = elem.offsetTop;
-    const node = elem;
-    while (node.offsetParent && node.offsetParent != document.body) {
-        node = node.offsetParent;
-        y += node.offsetTop;
-    }
-    return y;
+function smoothScroll(target) {
+  document.querySelector(target).scrollIntoView({ 
+    behavior: 'smooth' 
+  });
 }
-
-
-function smoothScroll(elemID) {
-    const startY = window.pageYOffset;
-    const stopY = getElemY(elemID);
-    const distance = stopY > startY ? stopY - startY : startY - stopY;
-    if (distance < 100) {
-        scrollTo(0, stopY);
-        return;
-    }
-    let speed = Math.round(distance / 100);
-    if (speed >= 20) speed = 20;
-    const step = Math.round(distance / 30);
-    let leapY = stopY > startY ? startY + step : startY - step;
-    let timer = 0;
-    if (stopY > startY) {
-        for (let i = startY; i < stopY; i += step) {
-            setTimeout("window.scrollTo(0, "+ leapY +")", timer * speed);
-            leapY += step;
-            if (leapY > stopY) leapY = stopY;
-            timer++;
-        } return;
-    }
-    for (let i = startY; i > stopY; i -= step) {
-        setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
-        leapY -= step;
-        if (leapY < stopY) leapY = stopY;
-        timer++;
-    }
-};
+  
+for (let link of navLinks) {
+  link.addEventListener('click', (ev) => {
+    ev.preventDefault();
+    smoothScroll(ev.target.hash);
+  });
+}
